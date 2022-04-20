@@ -1,0 +1,1120 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    background-color: #212121;
+}
+
+
+/*ENCABEZADO*/
+
+.encabezado{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 0 80px 0;
+    background-color: #212121;
+}
+
+.div-menu{
+    display: flex;
+    align-items: center;
+}
+.div-menu a{
+    height: 30px;
+}
+.div-menu input{
+    height: 25px;
+    margin: 0 0 0 200px;
+    background-color: #ffff;
+    flex-wrap: wrap;
+}
+nav{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: 300px;
+}
+nav a{
+    color: #ffff;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a:hover{
+    color: black;
+}
+
+
+/*MAIN*/
+
+.caja-contenedora{
+    width: 294px;
+    height: 517px;
+    background-color:#333333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffff;
+    margin-left: 40px;
+}
+.caja-contenedora a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffff;
+    text-decoration: none;
+}
+.iconos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#grid-main{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows:repeat(3, 200px);
+    grid-template-areas:
+    "caja-contenedora video video spotify"
+    "caja-contenedora video video spotify"
+    "caja-contenedora video video spotify";
+    gap: 2px;
+}
+.caja-contenedora{
+    grid-area: caja-contenedora ;
+}
+.video{
+    grid-area: video ;
+    display: flex;
+    justify-content:center;
+}
+.spotify{
+    grid-area: spotify;
+    margin: 0 40px 0 40px;
+}
+@media screen and (max-width:768px){
+    #grid-main{
+        display: grid;
+        grid-template-columns: repeat(2,40%);
+        grid-template-rows:repeat(3, 200px);
+        grid-template-areas:
+        "caja-contenedora spotify"
+        "caja-contenedora spotify"
+        "video  video";
+        gap: 90px;
+    }
+    .caja-contenedora{
+        grid-area:caja-contenedora ;
+    }
+    .video{
+        grid-area: video;
+        width: 650px;
+        height: 226px;
+        margin: 40px;
+    }
+    .spotify{
+        grid-area:spotify;
+        margin-right:40px ;
+    }
+}
+@media screen and (max-width:320px) {
+    #grid-main{
+        display: grid;
+        grid-template-columns: repeat(2,95%);
+        grid-template-rows:repeat(3, 200px);
+        grid-template-areas:
+        "caja-contenedora spotify"
+        "caja-contenedora spotify"
+        "video  video";
+        gap: 90px;
+    }
+    .caja-contenedora{
+        grid-area:caja-contenedora ;
+    }
+    .video{
+        grid-area: video;
+        width: 590px;
+        height: 226px;
+        margin: 40px;
+    }
+    .spotify{
+        grid-area:spotify;
+        margin-right:40px ;
+    }
+}
+
+/*HTML ABOUT US*/
+.grid-about-us{
+    display: grid;
+    grid-template-areas: 
+    "caja-contenedora about-us img";
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(1,800px);
+    gap:20px
+}
+.caja-contenedora{
+    grid-area: caja-contenedora;
+}
+.about-us{
+    grid-area: about-us;
+    color: #ffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.img{
+grid-area: img;
+}
+h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width:768px){
+    .grid-about-us{
+        display: grid;
+        grid-template-areas: 
+        "caja-contenedora about-us"
+        "caja-contenedora about-us"
+        "img img "
+        "img img";
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: repeat(4,300px);
+        gap:50px
+    }
+    .caja-contenedora{
+        grid-area: caja-contenedora;
+    }
+    .about-us{
+        grid-area: about-us;
+        color: #ffff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    }
+    .img{
+    grid-area: img;
+    }
+}
+@media screen and (max-width:320px){
+    .grid-about-us{
+        display: grid;
+        grid-template-areas: 
+        "caja-contenedora about-us"
+        "caja-contenedora about-us"
+        "img img "
+        "img img";
+        grid-template-columns: repeat(2, 95%);
+        grid-template-rows: repeat(4,278px);
+        gap:50px
+    }
+    .caja-contenedora{
+        grid-area: caja-contenedora;
+    }
+    .about-us{
+        grid-area: about-us;
+        color: #ffff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    }
+    .img{
+    grid-area: img;
+    }
+}
+/*HTML LOGIN*/
+.grid-login{
+    display: grid;
+    grid-template-areas: 
+    "caja-contenedora form";
+    grid-template-columns: repeat(2,40%);
+    grid-template-rows: repeat(1,800px);
+}
+
+form{
+    grid-area: form;
+    width: 450px;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+form h1{
+    color:#ffa43a
+}
+input{
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border-radius: 7px;
+    background-color: #ffff;
+}
+
+#button{
+    background-color: #ffa43a;
+    color: #ffff;
+    border-radius: 7px;
+}
+.check{
+    display: flex;
+    color: #ffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+@media screen and (max-width:768px) {
+    .grid-login{
+        display: grid;
+        grid-template-areas: 
+        "caja-contenedora form";
+        grid-template-columns: repeat(2,45%);
+        grid-template-rows: repeat(1,800px);
+    }
+    form{
+        grid-area: form;
+        width: 400px;
+        margin: auto;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .caja-contenedora{
+        grid-area: caja-contenedora ;
+    }
+}
+@media screen and (max-width:320px) {
+    .grid-login{
+        display: grid;
+        grid-template-areas: 
+        "caja-contenedora form";
+        grid-template-columns: repeat(2,102%);
+        grid-template-rows: repeat(1,1000px);
+    }
+    form{
+        grid-area: form;
+        width: 300px;
+        margin: auto;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .caja-contenedora{
+        grid-area: caja-contenedora ;
+    }
+}
+
+/*HTML PLAYLIST*/
+.grid-caja-playlist{
+    display: grid;
+    grid-template-areas:
+    "caja-contenedora grid-playlist"
+    "caja-contenedora grid-playlist";
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(2,500px);
+}
+.grid-playlist{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "ukelele pereyra pelis "
+    "mate hm hits";
+    grid-template-columns: repeat(4,47%);
+    grid-template-rows: repeat(2, 500px);
+}
+.ukelele{
+    grid-area: ukelele;
+    display: flex;
+    justify-content: center;
+}
+.pereyra{
+    grid-area: pereyra;
+    display: flex;
+    justify-content: center;
+}
+.pelis{
+    grid-area: pelis;
+    display: flex;
+    justify-content: center;
+}
+.mate{
+    grid-area: mate;
+    display: flex;
+    justify-content: center;
+}
+.hm{
+    grid-area: hm;
+    display: flex;
+    justify-content: center;
+}
+.hits{
+    grid-area: hits;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width:768px) {
+    .grid-playlist{
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        "ukelele pereyra" 
+        "pelis mate"
+        "hm hits";
+        grid-template-columns: repeat(2,47%);
+        grid-template-rows: repeat(3, 500px);
+    }
+    .ukelele{
+        grid-area: ukelele;
+        display: flex;
+        justify-content: center;
+    }
+    .pereyra{
+        grid-area: pereyra;
+        display: flex;
+        justify-content: center;
+    }
+    .pelis{
+        grid-area: pelis;
+        display: flex;
+        justify-content: center;
+    }
+    .mate{
+        grid-area: mate;
+        display: flex;
+        justify-content: center;
+    }
+    .hm{
+        grid-area: hm;
+        display: flex;
+        justify-content: center;
+    }
+    .hits{
+        grid-area: hits;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:320px) {
+    .grid-playlist{
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        "ukelele" 
+        "pereyra" 
+        "pelis" 
+        "mate"
+        "hm" 
+        "hits";
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(6, 500px);
+    }
+    .ukelele{
+        grid-area: ukelele;
+        display: flex;
+        justify-content: center;
+    }
+    .pereyra{
+        grid-area: pereyra;
+        display: flex;
+        justify-content: center;
+    }
+    .pelis{
+        grid-area: pelis;
+        display: flex;
+        justify-content: center;
+    }
+    .mate{
+        grid-area: mate;
+        display: flex;
+        justify-content: center;
+    }
+    .hm{
+        grid-area: hm;
+        display: flex;
+        justify-content: center;
+    }
+    .hits{
+        grid-area: hits;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:768px) {
+    .grid-caja-playlist{
+        display: grid;
+        grid-template-areas:
+        "caja-contenedora grid-playlist"
+        "caja-contenedora grid-playlist";
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(2,700px);
+    }
+}
+@media screen and (max-width:320px) {
+    .grid-caja-playlist{
+        display: grid;
+        grid-template-areas:
+        "caja-contenedora grid-playlist"
+        "caja-contenedora grid-playlist";
+        grid-template-columns: repeat(2,100%);
+        grid-template-rows: repeat(2,1500px);
+    }
+}
+/*HTML SHOP*/
+.grid-shop{
+    display: grid;
+    grid-template-areas: 
+    "chello flauta-traversa"
+    "guitarra piano";
+    grid-template-columns: repeat(2, 60%);
+    grid-template-rows: repeat(2, 300px);
+}
+.chello{
+    grid-area: chello;
+}
+.flauta-traversa{
+    grid-area: flauta-traversa;
+}
+.guitarra{
+    grid-area: guitarra;
+}
+.piano{
+    grid-area: piano;
+}
+@media screen and (max-width:768px) {
+    .grid-shop{
+        display: grid;
+        grid-template-areas: 
+        "chello flauta-traversa"
+        "guitarra piano";
+        grid-template-columns: repeat(2, 60%);
+        grid-template-rows: repeat(2, 300px);
+    }
+    .chello{
+        grid-area: chello;
+        width: 130px;
+        height: 50%;
+    }
+    .flauta-traversa{
+        grid-area: flauta-traversa;
+        width: 130px;
+        height: 50%;
+    }
+    .guitarra{
+        grid-area: guitarra;
+        width: 130px;
+        height: 50%;
+    }
+    .piano{
+        grid-area: piano;
+        width: 130px;
+        height: 50%;
+    }
+}
+@media screen and (max-width:320px) {
+    .grid-shop{
+        display: grid;
+        grid-template-areas: 
+        "chello"
+        "flauta-traversa"
+        "guitarra" 
+        "piano";
+        grid-template-columns: repeat(1, 60%);
+        grid-template-rows: repeat(4, 300px);
+    }
+    .chello{
+        grid-area: chello;
+        width: 210px;
+        height: 85%;
+    }
+    .flauta-traversa{
+        grid-area: flauta-traversa;
+        width: 210px;
+        height: 85%;
+    }
+    .guitarra{
+        grid-area: guitarra;
+        width: 210px;
+        height: 85%;
+    }
+    .piano{
+        grid-area: piano;
+        width: 210px;
+        height: 85%;
+    }
+}
+.grid-caja-shop{
+    display: grid;
+    grid-template-areas:
+    "caja-contenedora grid-shop";
+    grid-template-columns: repeat(2,40%);
+    grid-template-rows: repeat(1,580px);
+}
+@media screen and (max-width:768px) {
+    .grid-caja-shop{
+        display: grid;
+        grid-template-areas:
+        "caja-contenedora grid-shop";
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(1,580px);
+    }
+}
+@media screen and (max-width:320px) {
+    .grid-caja-shop{
+        display: grid;
+        grid-template-areas:
+        "caja-contenedora grid-shop";
+        grid-template-columns: repeat(2,115%);
+        grid-template-rows: repeat(1,1200px);
+    }
+}
+.grid-artist{
+    display: grid;
+    margin: 0 40px 0 40px;
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: repeat(3,230px);
+    justify-content: center;
+    grid-template-areas:
+    "lali shawn abel ariana ed laura" 
+    "miley francesco ross justin axel sabrina";
+}
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffff;
+    margin: 75px 0 50px 0;
+}
+.lali{
+    grid-area: lali;
+    display: flex;
+    justify-content: center;
+}
+.shawn{
+    grid-area: shawn;
+    display: flex;
+    justify-content: center;
+}
+.abel{
+    grid-area: abel;
+    display: flex;
+    justify-content: center;
+}
+.ariana{
+    grid-area: ariana;
+    display: flex;
+    justify-content: center;
+}
+.ed{
+    grid-area: ed;
+    display: flex;
+    justify-content: center;
+}
+.laura{
+    grid-area: laura;
+    display: flex;
+    justify-content: center;
+}
+.miley{
+    grid-area: miley;
+    display: flex;
+    justify-content: center;
+}
+.francesco{
+    grid-area: francesco;
+    display: flex;
+    justify-content: center;
+}
+.ross{
+    grid-area: ross;
+    display: flex;
+    justify-content: center;
+}
+.justin{
+    grid-area: justin;
+    display: flex;
+    justify-content: center;
+}
+.axel{
+    grid-area: axel;
+    display: flex;
+    justify-content: center;
+}
+.sabrina{
+    grid-area: sabrina;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width:768px){
+    .grid-artist{
+        display: grid;
+        margin: 300px 50px 0 25px;
+        width: 80%;
+        padding: 50px;
+        grid-template-columns: repeat(3, 20%);
+        grid-template-rows: repeat(4,200px);
+        justify-content: center;
+        grid-template-areas:
+        "lali shawn abel"
+        "ariana ed laura" 
+        "miley francesco ross"
+        "justin axel sabrina";
+        gap: 80px;
+    }
+    .lali{
+        grid-area: lali;
+        display: flex;
+        justify-content: center;
+    }
+    .shawn{
+        grid-area: shawn;
+        display: flex;
+        justify-content: center;
+    }
+    .abel{
+        grid-area: abel;
+        display: flex;
+        justify-content: center;
+    }
+    .ariana{
+        grid-area: ariana;
+        display: flex;
+        justify-content: center;
+    }
+    .ed{
+        grid-area: ed;
+        display: flex;
+        justify-content: center;
+    }
+    .laura{
+        grid-area: laura;
+        display: flex;
+        justify-content: center;
+    }
+    .miley{
+        grid-area: miley;
+        display: flex;
+        justify-content: center;
+    }
+    .francesco{
+        grid-area: francesco;
+        display: flex;
+        justify-content: center;
+    }
+    .ross{
+        grid-area: ross;
+        display: flex;
+        justify-content: center;
+    }
+    .justin{
+        grid-area: justin;
+        display: flex;
+        justify-content: center;
+    }
+    .axel{
+        grid-area: axel;
+        display: flex;
+        justify-content: center;
+    }
+    .sabrina{
+        grid-area: sabrina;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:320px){
+    .grid-artist{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 60%);
+        grid-template-rows: repeat(6,180px);
+        justify-content: space-between;
+        grid-template-areas:
+        "lali shawn "
+        "abel ariana"
+        "ed laura" 
+        "miley francesco"
+        "ross justin" 
+        "axel sabrina";
+        gap: 45px;
+    }
+    .lali{
+        grid-area: lali;
+        display: flex;
+        justify-content: center;
+    }
+    .shawn{
+        grid-area: shawn;
+        display: flex;
+        justify-content: center;
+    }
+    .abel{
+        grid-area: abel;
+        display: flex;
+        justify-content: center;
+    }
+    .ariana{
+        grid-area: ariana;
+        display: flex;
+        justify-content: center;
+    }
+    .ed{
+        grid-area: ed;
+        display: flex;
+        justify-content: center;
+    }
+    .laura{
+        grid-area: laura;
+        display: flex;
+        justify-content: center;
+    }
+    .miley{
+        grid-area: miley;
+        display: flex;
+        justify-content: center;
+    }
+    .francesco{
+        grid-area: francesco;
+        display: flex;
+        justify-content: center;
+    }
+    .ross{
+        grid-area: ross;
+        display: flex;
+        justify-content: center;
+    }
+    .justin{
+        grid-area: justin;
+        display: flex;
+        justify-content: center;
+    }
+    .axel{
+        grid-area: axel;
+        display: flex;
+        justify-content: center;
+    }
+    .sabrina{
+        grid-area: sabrina;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*ALBUMS*/
+
+.grid-albums{
+    display: grid;
+    margin: 0 40px 0 40px;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(1,380px);
+    gap: 2px;
+    grid-template-areas: "one-direction twice carpenter r5";
+}
+.one-direction{
+    grid-area: one-direction;
+    display: flex;
+    justify-content: center;
+}
+.twice{
+    grid-area: twice;
+    display: flex;
+    justify-content: center;
+}
+.carpenter{
+    grid-area: carpenter;
+    display: flex;
+    justify-content: center;
+}
+.r5{
+    grid-area: r5;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width:768px){
+    .grid-albums{
+        display: grid;
+        margin: 0 40px 0 40px;
+        width: 90%;
+        padding: 20px;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 404px);
+        gap: 2px;
+        grid-template-areas: 
+        "one-direction twice" "carpenter r5";
+    }
+    .one-direction{
+        grid-area: one-direction;
+        display: flex;
+        justify-content: center;
+    }
+    .twice{
+        grid-area: twice;
+        display: flex;
+        justify-content: center;
+    }
+    .carpenter{
+        grid-area: carpenter;
+        display: flex;
+        justify-content: center;
+    }
+    .r5{
+        grid-area: r5;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:320px){
+    .grid-albums{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 50%);
+        grid-template-rows: repeat(4, 404px);
+        gap: 2px;
+        justify-content: center;
+        grid-template-areas: 
+        "one-direction"
+        "twice" 
+        "carpenter" 
+        "r5";
+    }
+    .one-direction{
+        grid-area: one-direction;
+        display: flex;
+        justify-content: center;
+    }
+    .twice{
+        grid-area: twice;
+        display: flex;
+        justify-content: center;
+    }
+    .carpenter{
+        grid-area: carpenter;
+        display: flex;
+        justify-content: center;
+    }
+    .r5{
+        grid-area: r5;
+        display: flex;
+        justify-content: center;
+    }
+}
+/*PODCAST*/
+
+.grid-podcast{
+    display: grid;
+    margin: 0 40px 0 40px;
+    grid-template-columns:repeat(3,34%) ;
+    grid-template-rows:repeat(1, 380px) ;
+    grid-template-areas: "itiel agape alex";
+}
+.itiel{
+    grid-area: itiel;
+    display: flex;
+    justify-content: center;
+}
+.agape{
+    grid-area: agape;
+    display: flex;
+    justify-content: center;
+}
+.alex{
+    grid-area: alex;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width:768px){
+    .grid-podcast{
+        display: grid;
+        margin: 0 40px 0 40px;
+        grid-template-columns:repeat(1,100%) ;
+        grid-template-rows:repeat(3, 380px) ;
+        grid-template-areas: 
+        "itiel"
+        "agape" 
+        "alex";
+    }
+    .itiel{
+        grid-area: itiel;
+        display: flex;
+        justify-content: center;
+    }
+    .agape{
+        grid-area: agape;
+        display: flex;
+        justify-content: center;
+    }
+    .alex{
+        grid-area: alex;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:320px){
+    .grid-podcast{
+        display: grid;
+        grid-template-columns:repeat(1,125%) ;
+        grid-template-rows:repeat(3, 380px) ;
+        grid-template-areas: 
+        "itiel"
+        "agape" 
+        "alex";
+    }
+    .itiel{
+        grid-area: itiel;
+        display: flex;
+        justify-content: center;
+    }
+    .agape{
+        grid-area: agape;
+        display: flex;
+        justify-content: center;
+    }
+    .alex{
+        grid-area: alex;
+        display: flex;
+        justify-content: center;
+    }
+}
+/*MIX*/
+
+.grid-mix{
+    display: grid;
+    margin: 0 40px 0 40px;
+    grid-template-columns:repeat(3,34%) ;
+    grid-template-rows:repeat(1, 450px) ;
+    grid-template-areas:
+    "daily-mix-1 daily-mix-2 daily-mix-3";
+}
+.daily-mix-1{
+    grid-area: daily-mix-1;
+    display: flex;
+    justify-content: center;
+}
+.daily-mix-2{
+    grid-area: daily-mix-2;
+    display: flex;
+    justify-content: center;
+}
+.daily-mix-3{
+    grid-area: daily-mix-3;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width:768px) {
+    .grid-mix{
+        display: grid;
+        margin: 0 40px 0 40px;
+        width: 90%;
+        padding: 20px;
+        grid-template-columns:repeat(1,100%) ;
+        grid-template-rows:repeat(3, 404px) ;
+        grid-template-areas: 
+        "daily-mix-1"
+        "daily-mix-2" 
+        "daily-mix-3";
+    }
+    
+    .daily-mix-1{
+        grid-area: daily-mix-1;
+        display: flex;
+        justify-content: center;
+    }
+    .daily-mix-2{
+        grid-area: daily-mix-2;
+        display: flex;
+        justify-content: center;
+    }
+    .daily-mix-3{
+        grid-area: daily-mix-3;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:320px) {
+    .grid-mix{
+        display: grid;
+        width: 90%;
+        padding: 20px;
+        grid-template-columns:repeat(1,100%) ;
+        grid-template-rows:repeat(3, 404px) ;
+        grid-template-areas: 
+        "daily-mix-1"
+        "daily-mix-2" 
+        "daily-mix-3";
+    }
+    
+    .daily-mix-1{
+        grid-area: daily-mix-1;
+        display: flex;
+        justify-content: center;
+    }
+    .daily-mix-2{
+        grid-area: daily-mix-2;
+        display: flex;
+        justify-content: center;
+    }
+    .daily-mix-3{
+        grid-area: daily-mix-3;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/*footer*/
+
+.grid-footer{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(1,100px);
+    grid-template-areas: 
+    "img-footer redes";
+}
+.img-footer{
+    grid-area: img-footer;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.redes{
+    grid-area: redes;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (width:768px) {
+    .grid-footer{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(1,85px);
+        grid-template-areas: 
+        "img-footer redes";
+    }
+    .img-footer{
+        grid-area: img-footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .redes{
+        grid-area: redes;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (width:320px) {
+    .grid-footer{
+        display: grid;
+        grid-template-columns: repeat(2,103%);
+        grid-template-rows: repeat(1,85px);
+        grid-template-areas: 
+        "img-footer redes";
+    }
+    .img-footer{
+        grid-area: img-footer;
+        display: flex;
+        align-items: center;
+    }
+    .redes{
+        grid-area: redes;
+        display: flex;
+        align-items: center;
+    }
+}
