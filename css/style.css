@@ -221,86 +221,67 @@ h2{
     grid-area: img;
     }
 }
+
 /*HTML LOGIN*/
 .grid-login{
     display: grid;
     grid-template-areas: 
-    "caja-contenedora form";
-    grid-template-columns: repeat(2,40%);
-    grid-template-rows: repeat(1,800px);
+    "caja-contenedora box box";
+    grid-template-columns: repeat(3,40%);
+    grid-template-rows: repeat(1,50px);
 }
-
-form{
-    grid-area: form;
-    width: 450px;
-    margin: auto;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-}
-form h1{
-    color:#ffa43a
-}
-input{
-    width: 100%;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    font-size: 17px;
-    border-radius: 7px;
-    background-color: #ffff;
-}
-
-#button{
-    background-color: #ffa43a;
-    color: #ffff;
-    border-radius: 7px;
-}
-.check{
-    display: flex;
-    color: #ffff;
+.box{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 350px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333333;
     text-align: center;
 }
-@media screen and (max-width:768px) {
-    .grid-login{
-        display: grid;
-        grid-template-areas: 
-        "caja-contenedora form";
-        grid-template-columns: repeat(2,45%);
-        grid-template-rows: repeat(1,800px);
-    }
-    form{
-        grid-area: form;
-        width: 400px;
-        margin: auto;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        margin-top: 20px;
-    }
-    .caja-contenedora{
-        grid-area: caja-contenedora ;
-    }
+.box h1{
+    text-transform: uppercase;
+    font-weight: 500;
 }
-@media screen and (max-width:320px) {
-    .grid-login{
-        display: grid;
-        grid-template-areas: 
-        "caja-contenedora form";
-        grid-template-columns: repeat(2,102%);
-        grid-template-rows: repeat(1,1000px);
-    }
-    form{
-        grid-area: form;
-        width: 300px;
-        margin: auto;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        margin-top: 20px;
-    }
-    .caja-contenedora{
-        grid-area: caja-contenedora ;
-    }
+.box input[type = "text"],.box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #218c74;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #ffff;
+    border-radius: 24px;
+    transition: 0.25s;
 }
+.box input[type= "text"]:focus,.box input[type= "password"]:focus{
+    width: 280px;
+    border-color: #474787;
+}
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #474787;
+    padding: 14px 40px;
+    outline: none;
+    color: #ffff;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+    background: #474787;
+}
+
+
 
 /*HTML PLAYLIST*/
 .grid-caja-playlist{
