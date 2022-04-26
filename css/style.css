@@ -1041,6 +1041,7 @@ h1{
 
 .grid-footer{
     display: grid;
+    margin-top: 200px;
     grid-template-columns: repeat(2,50%);
     grid-template-rows: repeat(1,100px);
     grid-template-areas: 
