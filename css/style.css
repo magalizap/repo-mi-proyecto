@@ -145,7 +145,7 @@ nav a:hover{
 }*/
 
 /*HTML ABOUT US*/
-.grid-about-us{
+/*.grid-about-us{
     display: grid;
     grid-template-areas: 
     "caja-contenedora about-us img";
@@ -218,7 +218,7 @@ h2{
     .img{
     grid-area: img;
     }
-}
+}*/
 
 /*HTML LOGIN*/
 .grid-login{
