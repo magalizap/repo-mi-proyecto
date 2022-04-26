@@ -47,7 +47,7 @@ nav a:hover{
 
 /*MAIN*/
 
-.caja-contenedora{
+/*.caja-contenedora{
     width: 294px;
     height: 517px;
     background-color:#333333;
@@ -142,7 +142,7 @@ nav a:hover{
         grid-area:spotify;
         margin-right:40px ;
     }
-}
+}*/
 
 /*HTML ABOUT US*/
 .grid-about-us{
