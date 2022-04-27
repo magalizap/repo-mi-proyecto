@@ -659,7 +659,68 @@ h2{
         border-radius: 10px;
     }
 }
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffff;
+    margin: 75px 0 50px 0;
+}
+
 .grid-artist{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+.artist{
+    border-radius: 20px;
+}
+@media screen and (max-width:900px) {
+    .grid-artist{
+        width: 100%;
+        max-width: 1200px;
+        margin: 30px;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .artist{
+        border-radius: 20px;
+    }
+}
+@media screen and (max-width:600px) {
+    .grid-artist{
+        width: 100%;
+        max-width: 1200px;
+        margin: 30px;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .artist{
+        border-radius: 20px;
+    }
+}
+@media screen and (max-width:300px) {
+    .grid-artist{
+        width: 100%;
+        max-width: 1200px;
+        margin: 30px;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .artist{
+        border-radius: 20px;
+    }
+}
+/*.grid-artist{
     display: grid;
     grid-template-columns: repeat(6, 170px);
     grid-template-rows: repeat(3,230px);
@@ -670,12 +731,7 @@ h2{
     "lali shawn abel ariana ed laura" 
     "miley francesco ross justin axel sabrina";
 }
-h1{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #ffff;
-    margin: 75px 0 50px 0;
-}
+
 .lali{
     grid-area: lali;
     display: flex;
@@ -901,7 +957,7 @@ h1{
         display: flex;
         justify-content: center;
     }
-}
+}*/
 
 /*ALBUMS*/
 
