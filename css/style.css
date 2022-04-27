@@ -1,10 +1,11 @@
 *{
     padding: 0%;
     margin: 0%;
-    box-sizing: border-box;
 }
 
-
+a:hover{
+    color: orange;
+}
 /*ENCABEZADO*/
 /*.encabezado{
     display: flex;
@@ -221,17 +222,12 @@ h2{
 }*/
 
 /*HTML LOGIN*/
-.grid-login{
-    display: grid;
-    grid-template-areas: 
-    "caja-contenedora box box";
-    grid-template-columns: repeat(3,40%);
-    grid-template-rows: repeat(1,50px);
-}
+
 .box{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 350px;
-    padding: 40px;
+    width: 500px;
+    padding: 80px;
+    border-radius: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -283,6 +279,7 @@ h2{
 
 
 /*HTML PLAYLIST*/
+/*
 .grid-caja-playlist{
     display: grid;
     grid-template-areas:
@@ -436,9 +433,64 @@ h2{
         grid-template-columns: repeat(2,100%);
         grid-template-rows: repeat(2,1500px);
     }
+}*/
+.container-playlist{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+.grid-playlist{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+@media screen and (max-width: 900px) {
+    .container-playlist{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+    }
+    .grid-playlist{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container-playlist{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+    }
+    .grid-playlist{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .container-playlist{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+    }
+    .grid-playlist{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        margin-left: 50px;
+    }
 }
 /*HTML SHOP*/
-.grid-shop{
+
+
+/*.grid-shop{
     display: grid;
     grid-template-areas: 
     "chello flauta-traversa"
@@ -544,12 +596,75 @@ h2{
         grid-template-columns: repeat(2,115%);
         grid-template-rows: repeat(1,1200px);
     }
+}*/
+.grid-caja-shop{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.instrumentos{
+    width: 225px;
+    height: 225px;
+    border-radius: 10px;
+}
+@media screen and (max-width:900px) {
+    .grid-caja-shop{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    .instrumentos{
+        width: 225px;
+        height: 225px;
+        border-radius: 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .grid-caja-shop{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .instrumentos{
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+    }
+}
+@media screen and (max-width:300px) {
+    .grid-caja-shop{
+        width: 55%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+    .instrumentos{
+        width: 155px;
+        height: 175px;
+        border-radius: 10px;
+    }
 }
 .grid-artist{
     display: grid;
-    margin: 0 40px 0 40px;
-    grid-template-columns: repeat(6, 15%);
+    grid-template-columns: repeat(6, 170px);
     grid-template-rows: repeat(3,230px);
+        margin: 0 40px 0 40px;
+    gap: 20px;
     justify-content: center;
     grid-template-areas:
     "lali shawn abel ariana ed laura" 
@@ -565,61 +680,73 @@ h1{
     grid-area: lali;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .shawn{
     grid-area: shawn;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .abel{
     grid-area: abel;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .ariana{
     grid-area: ariana;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .ed{
     grid-area: ed;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .laura{
     grid-area: laura;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .miley{
     grid-area: miley;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .francesco{
     grid-area: francesco;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .ross{
     grid-area: ross;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .justin{
     grid-area: justin;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .axel{
     grid-area: axel;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .sabrina{
     grid-area: sabrina;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 @media screen and (max-width:768px){
     .grid-artist{
@@ -628,7 +755,7 @@ h1{
         width: 80%;
         padding: 50px;
         grid-template-columns: repeat(3, 20%);
-        grid-template-rows: repeat(4,200px);
+        grid-template-rows: repeat(4,20rem);
         justify-content: center;
         grid-template-areas:
         "lali shawn abel"
@@ -1039,9 +1166,11 @@ h1{
 
 /*footer*/
 
-.grid-footer{
+/*.grid-footer{
     display: grid;
     margin-top: 200px;
+    position: absolute;
+    bottom: 0;
     grid-template-columns: repeat(2,50%);
     grid-template-rows: repeat(1,100px);
     grid-template-areas: 
@@ -1098,4 +1227,4 @@ h1{
         display: flex;
         align-items: center;
     }
-}
+}*/
