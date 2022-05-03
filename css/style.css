@@ -1,6 +1,7 @@
 *{
     padding: 0%;
     margin: 0%;
+
 }
 
 a:hover{
@@ -195,9 +196,7 @@ h1{
 /*ARTISTS*/
 
 .grid-artist{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 40px 0 130px;
+    margin: 0 40px 0 40px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
@@ -207,8 +206,6 @@ h1{
 }
 @media screen and (max-width:900px) {
     .grid-artist{
-        width: 100%;
-        max-width: 1200px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
@@ -231,7 +228,7 @@ h1{
         border-radius: 20px;
     }
 }
-@media screen and (max-width:300px) {
+@media screen and (max-width:320px) {
     .grid-artist{
         width: 100%;
         max-width: 1200px;
@@ -277,11 +274,11 @@ h1{
     display: flex;
     justify-content: center;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:900px){
     .grid-albums{
         display: grid;
         margin: 0 40px 0 40px;
-        width: 90%;
+        width: 100%;
         padding: 20px;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(2, 404px);
@@ -350,9 +347,17 @@ h1{
 .grid-podcast{
     display: grid;
     margin: 0 40px 0 40px;
-    grid-template-columns:repeat(3,34%) ;
-    grid-template-rows:repeat(1, 380px) ;
-    grid-template-areas: "itiel agape alex";
+    grid-template-columns:repeat(2,49%) ;
+    grid-template-rows:repeat(2, 250px) ;
+    grid-template-areas: 
+    "ids itiel"
+    "agape alex";
+    gap:40px
+}
+.ids{
+    grid-area: ids;
+    display: flex;
+    justify-content: center;
 }
 .itiel{
     grid-area: itiel;
@@ -369,16 +374,22 @@ h1{
     display: flex;
     justify-content: center;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:900px){
     .grid-podcast{
         display: grid;
         margin: 0 40px 0 40px;
         grid-template-columns:repeat(1,100%) ;
-        grid-template-rows:repeat(3, 380px) ;
+        grid-template-rows:repeat(4, 310px) ;
         grid-template-areas: 
+        "ids"
         "itiel"
         "agape" 
         "alex";
+    }
+    .ids{
+        grid-area: ids;
+        display: flex;
+        justify-content: center;
     }
     .itiel{
         grid-area: itiel;
@@ -400,11 +411,17 @@ h1{
     .grid-podcast{
         display: grid;
         grid-template-columns:repeat(1,125%) ;
-        grid-template-rows:repeat(3, 380px) ;
-        grid-template-areas: 
+        grid-template-rows:repeat(4, 380px) ;
+        grid-template-areas:
+        "ids"
         "itiel"
         "agape" 
         "alex";
+    }
+    .ids{
+        grid-area: ids;
+        display: flex;
+        justify-content: center;
     }
     .itiel{
         grid-area: itiel;
@@ -507,68 +524,11 @@ h1{
     }
 }
 
+/*FOOTER*/
 
-/*footer*/
 
-/*.grid-footer{
-    display: grid;
-    margin-top: 200px;
-    position: absolute;
-    bottom: 0;
-    grid-template-columns: repeat(2,50%);
-    grid-template-rows: repeat(1,100px);
-    grid-template-areas: 
-    "img-footer redes";
-}
-.img-footer{
-    grid-area: img-footer;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-}
-.redes{
-    grid-area: redes;
-    display: flex;
-    align-items: center;
-}
 
-@media screen and (width:768px) {
-    .grid-footer{
-        display: grid;
-        grid-template-columns: repeat(2,50%);
-        grid-template-rows: repeat(1,85px);
-        grid-template-areas: 
-        "img-footer redes";
-    }
-    .img-footer{
-        grid-area: img-footer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-    .redes{
-        grid-area: redes;
-        display: flex;
-        align-items: center;
-    }
+li{
+    list-style-type: none;
+    text-align: center;
 }
-@media screen and (width:320px) {
-    .grid-footer{
-        display: grid;
-        grid-template-columns: repeat(2,103%);
-        grid-template-rows: repeat(1,85px);
-        grid-template-areas: 
-        "img-footer redes";
-    }
-    .img-footer{
-        grid-area: img-footer;
-        display: flex;
-        align-items: center;
-    }
-    .redes{
-        grid-area: redes;
-        display: flex;
-        align-items: center;
-    }
-}*/
