@@ -7,7 +7,9 @@
 a:hover{
     color: orange !important;
 }
-
+h1{
+    color: orange !important;
+}
 
 /*HTML LOGIN*/
 
@@ -107,7 +109,7 @@ a:hover{
         margin-left: 50px;
     }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     .container-playlist{
         width: 100%;
         max-width: 1200px;
@@ -192,6 +194,7 @@ h1{
     color: #ffff;
     margin: 200px 0 50px 0;
 }
+
 
 /*ARTISTS*/
 
@@ -523,6 +526,71 @@ h1{
         justify-content: center;
     }
 }
+
+
+/*.artist{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.filas{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.albums{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.podcast{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mix{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "artist"
+    "albums"
+    "podcast"
+    "mix";
+}
+@media screen and (max-width:900px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "artist"
+        "albums"
+        "podcast"
+        "mix";
+    }
+}
+@media screen and (max-width:300px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "artist"
+        "albums"
+        "podcast"
+        "mix";
+    }
+    .artist{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .filas{
+        display: flex;
+        flex-direction: column;
+    }
+}*/
 
 /*FOOTER*/
 
