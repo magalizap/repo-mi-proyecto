@@ -1,7 +1,6 @@
 *{
     padding: 0%;
     margin: 0%;
-
 }
 
 a:hover{
@@ -224,13 +223,11 @@ h1{
 }
 @media screen and (max-width:600px) {
     .grid-artist{
-        width: 100%;
-        max-width: 1200px;
-        margin: 30px;
-        padding: 40px 0;
+        margin: 15px;
+        padding: 20px 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 5px;
     }
     .artist{
         border-radius: 20px;
@@ -238,16 +235,16 @@ h1{
 }
 @media screen and (max-width:320px) {
     .grid-artist{
-        width: 100%;
-        max-width: 1200px;
-        margin: 30px;
-        padding: 40px 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        margin: 70px;
+        padding: 10px 0;
         gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
     .artist{
         border-radius: 20px;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -257,28 +254,23 @@ h1{
 .grid-albums{
     display: grid;
     margin: 0 40px 0 40px;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(1,380px);
-    gap: 2px;
-    grid-template-areas: "one-direction twice carpenter r5";
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
 }
 .one-direction{
-    grid-area: one-direction;
     display: flex;
     justify-content: center;
 }
 .twice{
-    grid-area: twice;
     display: flex;
     justify-content: center;
 }
 .carpenter{
-    grid-area: carpenter;
     display: flex;
     justify-content: center;
 }
 .r5{
-    grid-area: r5;
     display: flex;
     justify-content: center;
 }
@@ -286,31 +278,46 @@ h1{
     .grid-albums{
         display: grid;
         margin: 0 40px 0 40px;
-        width: 100%;
-        padding: 20px;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(2, 404px);
-        gap: 2px;
-        grid-template-areas: 
-        "one-direction twice" "carpenter r5";
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     .one-direction{
-        grid-area: one-direction;
         display: flex;
         justify-content: center;
     }
     .twice{
-        grid-area: twice;
         display: flex;
         justify-content: center;
     }
     .carpenter{
-        grid-area: carpenter;
         display: flex;
         justify-content: center;
     }
     .r5{
-        grid-area: r5;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:600px){
+    .grid-albums{
+        display: grid;
+        margin: 0 25px 0 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .one-direction{
+        display: flex;
+        justify-content: center;
+    }
+    .twice{
+        display: flex;
+        justify-content: center;
+    }
+    .carpenter{
+        display: flex;
+        justify-content: center;
+    }
+    .r5{
         display: flex;
         justify-content: center;
     }
@@ -318,34 +325,23 @@ h1{
 @media screen and (max-width:320px){
     .grid-albums{
         display: grid;
-        width: 100%;
-        grid-template-columns: repeat(1, 50%);
-        grid-template-rows: repeat(4, 404px);
-        gap: 2px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
         justify-content: center;
-        grid-template-areas: 
-        "one-direction"
-        "twice" 
-        "carpenter" 
-        "r5";
     }
     .one-direction{
-        grid-area: one-direction;
         display: flex;
         justify-content: center;
     }
     .twice{
-        grid-area: twice;
         display: flex;
         justify-content: center;
     }
     .carpenter{
-        grid-area: carpenter;
         display: flex;
         justify-content: center;
     }
     .r5{
-        grid-area: r5;
         display: flex;
         justify-content: center;
     }
@@ -355,30 +351,22 @@ h1{
 .grid-podcast{
     display: grid;
     margin: 0 40px 0 40px;
-    grid-template-columns:repeat(2,49%) ;
-    grid-template-rows:repeat(2, 250px) ;
-    grid-template-areas: 
-    "ids itiel"
-    "agape alex";
+    grid-template-columns:repeat(2,1fr) ;
     gap:40px
 }
 .ids{
-    grid-area: ids;
     display: flex;
     justify-content: center;
 }
 .itiel{
-    grid-area: itiel;
     display: flex;
     justify-content: center;
 }
 .agape{
-    grid-area: agape;
     display: flex;
     justify-content: center;
 }
 .alex{
-    grid-area: alex;
     display: flex;
     justify-content: center;
 }
@@ -386,63 +374,69 @@ h1{
     .grid-podcast{
         display: grid;
         margin: 0 40px 0 40px;
-        grid-template-columns:repeat(1,100%) ;
-        grid-template-rows:repeat(4, 310px) ;
-        grid-template-areas: 
-        "ids"
-        "itiel"
-        "agape" 
-        "alex";
+        grid-template-columns:repeat(1,1fr);
     }
     .ids{
-        grid-area: ids;
         display: flex;
         justify-content: center;
     }
     .itiel{
-        grid-area: itiel;
         display: flex;
         justify-content: center;
     }
     .agape{
-        grid-area: agape;
         display: flex;
         justify-content: center;
     }
     .alex{
-        grid-area: alex;
         display: flex;
         justify-content: center;
     }
 }
-@media screen and (max-width:320px){
+
+@media screen and (max-width:600px){
     .grid-podcast{
         display: grid;
-        grid-template-columns:repeat(1,125%) ;
-        grid-template-rows:repeat(4, 380px) ;
-        grid-template-areas:
-        "ids"
-        "itiel"
-        "agape" 
-        "alex";
+        margin: 0 40px 0 40px;
+        grid-template-columns:repeat(1,1fr);
     }
     .ids{
-        grid-area: ids;
         display: flex;
         justify-content: center;
     }
     .itiel{
-        grid-area: itiel;
         display: flex;
         justify-content: center;
     }
     .agape{
-        grid-area: agape;
         display: flex;
         justify-content: center;
     }
     .alex{
-        grid-area: alex;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:320px){
+    .grid-podcast{
+        display: grid;
+        grid-template-columns:repeat(1,1fr);
+    }
+    .ids{
+
+        display: flex;
+        justify-content: center;
+    }
+    .itiel{
+        display: flex;
+        justify-content: center;
+    }
+    .agape{
+        display: flex;
+        justify-content: center;
+    }
+    .alex{
         display: flex;
         justify-content: center;
     }
@@ -451,53 +445,92 @@ h1{
 
 .grid-mix{
     display: grid;
-    margin: 0 40px 0 40px;
-    grid-template-columns:repeat(3,34%) ;
-    grid-template-rows:repeat(1, 450px) ;
-    grid-template-areas:
-    "daily-mix-1 daily-mix-2 daily-mix-3";
+    margin: 0 40px 40px 40px;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;
 }
 .daily-mix-1{
-    grid-area: daily-mix-1;
     display: flex;
     justify-content: center;
 }
 .daily-mix-2{
-    grid-area: daily-mix-2;
     display: flex;
     justify-content: center;
 }
 .daily-mix-3{
-    grid-area: daily-mix-3;
+    display: flex;
+    justify-content: center;
+}
+.mix-country{
+    display: flex;
+    justify-content: center;
+}
+.mix-pop{
+    display: flex;
+    justify-content: center;
+}
+.mix-latino{
     display: flex;
     justify-content: center;
 }
 @media screen and (max-width:900px) {
     .grid-mix{
         display: grid;
-        margin: 0 40px 0 40px;
-        width: 90%;
-        padding: 20px;
-        grid-template-columns:repeat(1,100%) ;
-        grid-template-rows:repeat(3, 404px) ;
-        grid-template-areas: 
-        "daily-mix-1"
-        "daily-mix-2" 
-        "daily-mix-3";
+        grid-template-columns:repeat(2,1fr);
     }
     
     .daily-mix-1{
-        grid-area: daily-mix-1;
         display: flex;
         justify-content: center;
     }
     .daily-mix-2{
-        grid-area: daily-mix-2;
         display: flex;
         justify-content: center;
     }
     .daily-mix-3{
-        grid-area: daily-mix-3;
+        display: flex;
+        justify-content: center;
+    }
+    .mix-country{
+        display: flex;
+        justify-content: center;
+    }
+    .mix-pop{
+        display: flex;
+        justify-content: center;
+    }
+    .mix-latino{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:600px) {
+    .grid-mix{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+    
+    .daily-mix-1{
+        display: flex;
+        justify-content: center;
+    }
+    .daily-mix-2{
+        display: flex;
+        justify-content: center;
+    }
+    .daily-mix-3{
+        display: flex;
+        justify-content: center;
+    }
+    .mix-country{
+        display: flex;
+        justify-content: center;
+    }
+    .mix-pop{
+        display: flex;
+        justify-content: center;
+    }
+    .mix-latino{
         display: flex;
         justify-content: center;
     }
@@ -505,28 +538,32 @@ h1{
 @media screen and (max-width:320px) {
     .grid-mix{
         display: grid;
-        width: 90%;
-        padding: 20px;
-        grid-template-columns:repeat(1,100%) ;
-        grid-template-rows:repeat(3, 404px) ;
-        grid-template-areas: 
-        "daily-mix-1"
-        "daily-mix-2" 
-        "daily-mix-3";
+        grid-template-columns:repeat(1,1fr);
+        gap: 20px;
+        justify-content: center;
     }
     
     .daily-mix-1{
-        grid-area: daily-mix-1;
         display: flex;
         justify-content: center;
     }
     .daily-mix-2{
-        grid-area: daily-mix-2;
         display: flex;
         justify-content: center;
     }
     .daily-mix-3{
-        grid-area: daily-mix-3;
+        display: flex;
+        justify-content: center;
+    }
+    .mix-country{
+        display: flex;
+        justify-content: center;
+    }
+    .mix-pop{
+        display: flex;
+        justify-content: center;
+    }
+    .mix-latino{
         display: flex;
         justify-content: center;
     }
